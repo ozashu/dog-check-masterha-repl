@@ -1,0 +1,9 @@
+init_config:
+
+instances:
+  - min_collection_interval: 30
+    command: "sudo -u mysql /usr/bin/masterha_check_repl --conf=/etc/mha.cnf"
+    metric_name: masterha.repl
+    metric_type: gauge
+    tags:
+      - custom:mha_repl
